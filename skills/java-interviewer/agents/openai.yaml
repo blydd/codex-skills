@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java 面试官"
+  short_description: "生成 Java 面试题/评分表，支持面试后整体评估"
+  default_prompt: "使用 $java-interviewer 根据这份简历（及岗位 JD）生成小白友好、可点击打分的面试题与评分表；面试完成后把勾选结果发回，生成候选人整体评估报告。"
