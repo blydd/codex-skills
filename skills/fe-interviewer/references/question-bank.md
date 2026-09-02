@@ -1,6 +1,6 @@
 # 企业级前端面试题库参考（面向 Vue 3 业务前端岗）
 
-用途：作为**出题覆盖面清单与补充追问来源**。本技能默认使用固定 7 题（见 SKILL.md「固定 7 题」），**生成时直接套用 `assets/面试题与评分表模板.md`，不需要从本库重新挑题**；本库用于两个场景：① 面试官现场想临时加问时，从这里取追问点；② 需要按简历做定制题时，作为考点覆盖面核对清单。
+用途：作为**出题覆盖面清单与补充追问来源**。本技能默认使用固定 6 题（见 SKILL.md「固定 6 题」），**生成时直接套用 `assets/面试题与评分表模板.md`，不需要从本库重新挑题**；本库用于两个场景：① 面试官现场想临时加问时，从这里取追问点；② 需要按简历做定制题时，作为考点覆盖面核对清单。
 
 ## 模块与考察点
 
@@ -82,7 +82,7 @@
 - 部署：静态产物 + Nginx/OSS+CDN、history fallback、index.html no-cache + 带 hash 资源长缓存
 - 常见坑：内存泄漏（定时器/监听/echarts 实例/事件总线未清理）、打包后白屏（base 配错 / 缺 fallback）、生产跨域、keep-alive 与组件 name、Vue 3 移除的 API
 
-### 7. jQuery / DOM / 工程化（JD 7 / 9 / 10）
+### 7. jQuery / DOM / 工程化 / 后台语言与 SQL（JD 7 / 9 / 10 / 11，第 6 题）
 
 - jQuery：`$()` 返回 jQuery 对象、链式调用靠 `return this`、常用 API、事件委托写法、`$.ajax`、`$.fn.extend` 写插件
 - `$(document).ready` vs `window.onload`（DOMContentLoaded vs load）
@@ -92,7 +92,12 @@
 - 包管理：npm/yarn/pnpm、lock 文件必须提交、Node 版本固定（.nvmrc）
 - 规范：ESLint + Prettier + Stylelint、husky + lint-staged + commitlint、CR、Git 分支模型
 - 监控与埋点：Sentry、`window.onerror`、`unhandledrejection`、`app.config.errorHandler`、sourcemap 不上公网
-- 后台语言与 SQL：Node 写脚本/BFF；INNER JOIN vs LEFT JOIN、GROUP BY + HAVING、索引的作用与代价
+- 后台语言了解程度（JD 10）：会哪一门（Node.js / Python / Java / Go）、用它实际写过什么（起服务 / BFF 聚合接口 / 构建与数据处理脚本）
+- SQL 基础：SELECT / WHERE / ORDER BY / LIMIT、INSERT / UPDATE / DELETE
+- INNER JOIN vs LEFT JOIN（左表全保留、右表补 NULL）、"查从未下单的用户" LEFT JOIN + IS NULL
+- GROUP BY + HAVING（WHERE 分组前、HAVING 分组后；聚合条件只能写 HAVING）
+- 索引的作用与代价（加速查询、拖慢写入、不滥用）
+- 前端了解后端的目的：看懂接口、能查数据排查问题、与后端协作沟通
 - 新标准关注度（JD 9）：容器查询、View Transitions API、Web Components、HTTP/3、Vite 生态、TypeScript、虚拟滚动、Web Vitals
 
 ## 难度分层参考
