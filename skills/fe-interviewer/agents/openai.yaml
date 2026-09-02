@@ -1,0 +1,4 @@
+interface:
+  display_name: "前端面试官"
+  short_description: "生成前端（Vue 3）面试题/评分表，答案小白友好，支持面试后整体评估"
+  default_prompt: "使用 $fe-interviewer 根据这份简历生成一份侧重 Vue 3 的前端面试题与评分表（答案要小白友好，适合后端面试官对照判断）；面试完成后把填写好的评分表发回，由 fe-evaluator 生成候选人整体评估报告。"

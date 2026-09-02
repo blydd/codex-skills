@@ -1,0 +1,4 @@
+interface:
+  display_name: "前端面试评估"
+  short_description: "根据已填写的前端面试评分表生成候选人整体评估报告"
+  default_prompt: "使用 $fe-evaluator 根据这份已填写的前端面试评分表（含候选人回答记录）生成候选人整体评估报告《评估报告.md》。"
